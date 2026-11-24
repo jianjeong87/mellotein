@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>멜로틴 메인페이지 v2</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="멜로틴은 설탕 0g, 단백질 20g의 꾸덕한 프로틴 치즈케이크예요.">
+<meta property="og:title" content="멜로틴 MELLOTEIN | 운동 끝나고 먹어도 칭찬받는 치즈케이크">
+<meta property="og:description" content="설탕 0g, 단백질 20g. 꾸덕한 단백질 치즈케이크">
+<meta property="og:image" content="assets/images/hero-cup.webp">
+<link rel="icon" href="assets/images/character.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Jua&amp;family=Gothic+A1:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F9F4EE}
+a{color:#A33F00}a:hover{color:#8A3500}
+h1,h2,h3,p,td,th{word-break:keep-all;overflow-wrap:break-word}h1,h2{text-wrap:balance}
+.wrap{max-width:1200px;margin:0 auto;padding:0 40px;box-sizing:border-box}
+.btn{transition:background-color .2s cubic-bezier(.2,.8,.2,1),color .2s,transform .2s,box-shadow .2s}
+.btn-p:hover{background:#A33F00 !important;color:#FFFFFF !important;transform:translateY(-2px);box-shadow:0 6px 16px rgba(58,34,20,.18)}
+.btn-p:active{background:#8A3500 !important;transform:scale(.98);box-shadow:none}
+.btn-s:hover{background:#3A2214 !important;color:#F9F4EE !important}.btn-i:hover{background:#F9F4EE !important;color:#3A2214 !important}
+.btn:focus-visible,.lk:focus-visible,.nav a:focus-visible,.menu a:focus-visible,button:focus-visible{outline:3px solid #123C6C;outline-offset:3px}
+.dark .btn:focus-visible,.dark .lk:focus-visible,.dark a:focus-visible{outline-color:#FCC144}
+.lk{text-decoration:none}.lk:hover{text-decoration:underline;text-underline-offset:4px}
+.nav a{color:#3A2214;text-decoration:none}.nav a:hover{color:#A33F00}
+.foot a{color:#F9F4EE;text-decoration:none}.foot a:hover{text-decoration:underline;text-underline-offset:4px}
+.stamp{transform:rotate(-12deg);animation:stamp .55s cubic-bezier(.2,.8,.2,1) .5s both}
+@keyframes stamp{from{opacity:0;transform:rotate(-12deg) scale(1.7)}to{opacity:1;transform:rotate(-12deg) scale(1)}}
+.swipe{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}.ig{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.mbar{display:none !important}
+@media (prefers-reduced-motion:reduce){*{animation:none !important;transition:none !important}}
+@media (max-width:960px){.nav{display:none !important}.burger{display:inline-flex !important}.hcta{display:none !important}}
+@media (max-width:767px){.wrap{padding:0 20px}.sec{padding-top:72px !important;padding-bottom:72px !important}.h1{font-size:36px !important}.h2{font-size:28px !important}.num{font-size:88px !important}.btnrow a{flex:1 1 100%}
+.swipe{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -20px;padding:4px 20px 16px}.swipe>*{flex:0 0 82%;scroll-snap-align:start}.ig{grid-template-columns:repeat(2,minmax(0,1fr))}
+.mbar{display:flex !important}@media (max-width:360px){.mtx{display:none}}.stamp{width:116px !important;height:116px !important;left:4px !important;top:-12px !important}.stamp>div{transform:scale(.74)}.foot{padding-bottom:128px !important}}
+</style>
+</head>
+<body>
+
+<div style="font-family: 'Gothic A1', -apple-system, 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif; color: #3A2214; background: #F9F4EE; font-size: 17px; line-height: 1.6; overflow-x: hidden">
+
+<!-- 헤더 -->
+<header style="position: sticky; top: 0; z-index: 20; background: #F9F4EE; border-bottom: 1px solid #F1E4D3">
+  <div class="wrap" style="height: 80px; display: flex; align-items: center; justify-content: space-between; gap: 24px">
+    <a href="#top" aria-label="멜로틴 홈" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: #3A2214">
+      <img src="assets/images/character.png" alt="" style="height: 40px; width: auto">
+      <span style="font-family: 'Jua', sans-serif; font-size: 26px; letter-spacing: 0.06em; line-height: 1">MELLOTEIN</span>
+    </a>
+    <nav class="nav" aria-label="주요 메뉴" style="display: flex; gap: 32px; font-weight: 600; font-size: 15px">
+      <a href="brand.html">브랜드</a>
+      <a href="product.html">제품</a>
+      <a href="#taste">맛 증명</a>
+      <a href="#workout">운동 후 루틴</a>
+      <a href="#buy">구매·체험</a>
+    </nav>
+    <div style="display: flex; align-items: center; gap: 8px">
+      <a class="btn btn-p hcta" href="#buy" style="display: inline-flex; align-items: center; height: 44px; padding: 0 20px; border-radius: 999px; background: #C24C00; color: #FFFFFF; font-weight: 600; font-size: 15px; text-decoration: none">무료 샘플 신청하기</a>
+      <button class="burger" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mmenu" data-open-menu style="display: none; width: 44px; height: 44px; align-items: center; justify-content: center; border: 0; border-radius: 12px; background: transparent; color: #3A2214; cursor: pointer">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- 모바일 전체 화면 메뉴 -->
+<div id="mmenu" hidden>
+  <div class="menu" role="dialog" aria-modal="true" aria-label="메뉴" style="position: fixed; inset: 0; z-index: 40; background: #F9F4EE; display: flex; flex-direction: column; padding: 0 20px 32px; box-sizing: border-box; overflow-y: auto">
+    <div style="height: 56px; display: flex; align-items: center; justify-content: space-between">
+      <span style="font-family: 'Jua', sans-serif; font-size: 24px; letter-spacing: 0.06em">MELLOTEIN</span>
+      <button type="button" aria-label="메뉴 닫기" data-close-menu style="width: 44px; height: 44px; border: 0; border-radius: 12px; background: transparent; color: #3A2214; cursor: pointer; display: inline-flex; align-items: center; justify-content: center">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg>
+      </button>
+    </div>
+    <nav aria-label="모바일 메뉴" style="display: flex; flex-direction: column; margin-top: 16px; border-top: 1px solid #F1E4D3">
+      <a href="brand.html" data-close-menu style="display: flex; justify-content: space-between; align-items: center; min-height: 56px; border-bottom: 1px solid #F1E4D3; color: #3A2214; text-decoration: none; font-family: 'Jua', sans-serif; font-size: 22px">브랜드 <span style="font-family: 'Gothic A1', sans-serif; font-size: 14px; color: #6B4A36">멜로틴 이야기</span></a>
+      <a href="product.html" data-close-menu style="display: flex; justify-content: space-between; align-items: center; min-height: 56px; border-bottom: 1px solid #F1E4D3; color: #3A2214; text-decoration: none; font-family: 'Jua', sans-serif; font-size: 22px">제품 <span style="font-family: 'Gothic A1', sans-serif; font-size: 14px; color: #6B4A36">프로틴 치즈케이크</span></a>
+      <a href="#taste" data-close-menu style="display: flex; justify-content: space-between; align-items: center; min-height: 56px; border-bottom: 1px solid #F1E4D3; color: #3A2214; text-decoration: none; font-family: 'Jua', sans-serif; font-size: 22px">맛 증명 <span style="font-family: 'Gothic A1', sans-serif; font-size: 14px; color: #6B4A36">블라인드 테스트</span></a>
+      <a href="#workout" data-close-menu style="display: flex; justify-content: space-between; align-items: center; min-height: 56px; border-bottom: 1px solid #F1E4D3; color: #3A2214; text-decoration: none; font-family: 'Jua', sans-serif; font-size: 22px">운동 후 루틴 <span style="font-family: 'Gothic A1', sans-serif; font-size: 14px; color: #6B4A36">운동별 칭찬 루틴</span></a>
+      <a href="#buy" data-close-menu style="display: flex; justify-content: space-between; align-items: center; min-height: 56px; border-bottom: 1px solid #F1E4D3; color: #3A2214; text-decoration: none; font-family: 'Jua', sans-serif; font-size: 22px">구매·체험 <span style="font-family: 'Gothic A1', sans-serif; font-size: 14px; color: #6B4A36">무료 샘플, 판매처</span></a>
+    </nav>
+    <a class="btn btn-p" href="#buy" data-close-menu style="margin-top: auto; display: flex; align-items: center; justify-content: center; height: 60px; border-radius: 999px; background: #C24C00; color: #FFFFFF; font-weight: 700; font-size: 18px; text-decoration: none">무료 샘플 신청하기</a>
+  </div>
+</div>
+
+<main id="top">
+
+<!-- 1. 히어로 -->
+<section class="sec" data-hero style="padding: 72px 0 112px">
+  <div class="wrap" style="display: flex; flex-wrap: wrap; align-items: center; gap: 56px">
+    <div style="flex: 1 1 440px; min-width: 0">
+      <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin: 0 0 24px"><p style="margin: 0; background: #FCC144; color: #3A2214; font-family: 'Jua', sans-serif; font-size: 15px; letter-spacing: 0.04em; line-height: 1; padding: 9px 16px; border-radius: 999px">설탕 0g · 단백질 20g</p><p style="margin: 0; font-size: 14px; font-weight: 700; color: #3A2214">당알코올 함유 · 1봉(200g) 400kcal</p></div>
+      <h1 class="h1" style="margin: 0; font-family: 'Jua', sans-serif; font-weight: 400; font-size: 56px; line-height: 1.2; letter-spacing: -0.01em">운동 끝나고 먹어도<br>칭찬받는 치즈케이크</h1>
+      <p style="margin: 24px 0 0; font-size: 20px; line-height: 1.6; max-width: 30em">오늘 운동한 당신에게,<br>꾸덕한 치즈케이크 한 조각.</p>
+      <div class="btnrow" style="display: flex; flex-wrap: wrap; gap: 16px; margin-top: 40px">
+        <a class="btn btn-p" href="#buy" style="display: inline-flex; align-items: center; justify-content: center; height: 60px; padding: 0 36px; border-radius: 999px; background: #C24C00; color: #FFFFFF; font-weight: 700; font-size: 18px; text-decoration: none">무료 샘플 신청하기</a>
+        <a class="btn btn-s" href="product.html" style="display: inline-flex; align-items: center; justify-content: center; height: 60px; padding: 0 36px; border-radius: 999px; border: 2px solid #3A2214; color: #3A2214; font-weight: 700; font-size: 18px; text-decoration: none; box-sizing: border-box">제품 자세히 보기</a>
+      </div>
+    </div>
+    <div style="flex: 1 1 460px; min-width: 0; position: relative">
+      <div style="background: #FCC144; border-radius: 280px 280px 40px 40px; padding: 28px 28px 0; overflow: hidden">
+        <img src="assets/images/hero-cup.webp" alt="크럼블을 올린 멜로틴 컵 치즈케이크, PROTEIN 20g 슬리브" style="display: block; width: 100%; aspect-ratio: 4 / 3.4; object-fit: cover; border-radius: 252px 252px 20px 20px">
+      </div>
+      <div class="stamp" role="img" aria-label="칭찬 도장: 오늘도 해냈다" style="position: absolute; top: -18px; left: -14px; width: 156px; height: 156px; border-radius: 50%; border: 4px solid #A33F00; background: rgba(249,244,238,0.95); display: flex; align-items: center; justify-content: center; box-sizing: border-box">
+        <div style="width: 128px; height: 128px; flex: none; border-radius: 50%; border: 2px dashed #A33F00; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #A33F00; font-family: 'Jua', sans-serif; text-align: center; line-height: 1.1; box-sizing: border-box">
+          <span style="font-size: 13px; letter-spacing: 0.1em">MELLOTEIN</span>
+          <span style="font-size: 26px; margin-top: 4px">오늘도<br>해냈다!</span>
+          <span style="font-size: 13px; margin-top: 4px">칭찬 한 조각</span>
+        </div>
+      </div>
+      <img src="assets/images/character.png" alt="" style="position: absolute; right: -8px; bottom: -36px; width: 132px; height: auto">
+    </div>
+  </div>
+</section>
+
+<!-- 2. 숫자로 증명 -->
+<section class="sec" id="numbers" data-num style="background: #F1E4D3; padding: 128px 0">
+  <div class="wrap">
+    <h2 class="h2" style="margin: 0; font-family: 'Jua', sans-serif; font-weight: 400; font-size: 40px; line-height: 1.25; text-align: center">말보다 숫자를 먼저 보여드릴게요</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin: 48px auto 0; max-width: 920px">
+      <div style="background: #F9F4EE; border-radius: 32px; padding: 40px 32px; text-align: center">
+        <p class="num" style="margin: 0; font-family: 'Jua', sans-serif; font-size: 128px; line-height: 1; color: #E45A00">0g</p>
+        <p style="margin: 12px 0 0; font-weight: 700; font-size: 20px">설탕</p>
+        <p style="margin: 8px 0 0; color: #6B4A36">달콤함은 남기고, 설탕은 뺐습니다.</p>
+        <p style="margin: 12px 0 0; font-size: 14px; font-weight: 700">당알코올 함유 · 1봉(200g) 400kcal</p>
+      </div>
+      <div style="background: #F9F4EE; border-radius: 32px; padding: 40px 32px; text-align: center">
+        <p class="num" aria-label="단백질 20g" style="margin: 0; font-family: 'Jua', sans-serif; font-size: 128px; line-height: 1; color: #E45A00; font-variant-numeric: tabular-nums"><span aria-hidden="true"><span data-count="20">20</span>g</span></p>
+        <p style="margin: 12px 0 0; font-weight: 700; font-size: 20px">단백질</p>
+        <p style="margin: 8px 0 0; color: #6B4A36">한 봉에 단백질 20g. 운동 끝나고 먹기 좋은 디저트예요.</p>
+      </div>
+    </div>
+    <p style="margin: 24px 0 0; text-align: center; font-size: 14px">*멜로틴 1봉(200g) 기준, 열량 400kcal · 당알코올(에리스리톨) 함유</p>
+  </div>
+</section>
+
+<!-- 3. 고민 공감 -->
+<section class="sec" style="padding: 128px 0 96px">
+  <div class="wrap">
+    <h2 class="h2" style="margin: 0; font-family: 'Jua', sans-serif; font-weight: 400; font-size: 40px; line-height: 1.25">“달달한 건 먹고 싶은데,<br>당은 신경 쓰여!”</h2>
+    <p style="margin: 16px 0 0; color: #6B4A36; font-size: 18px">운동 끝난 뒤, 누구나 한 번은 했던 고민</p>
+    <div class="swipe" style="margin-top: 48px">
+      <div style="position: relative; background: #FFFFFF; border: 2px solid #3A2214; border-radius: 28px; padding: 28px; font-size: 18px; line-height: 1.55; box-sizing: border-box">카페 치즈케이크는 맛있지만, 한 조각 먹고 나면 오늘 운동이 생각나요.<span aria-hidden="true" style="position: absolute; left: 36px; bottom: -11px; width: 18px; height: 18px; background: #FFFFFF; border-right: 2px solid #3A2214; border-bottom: 2px solid #3A2214; transform: rotate(45deg)"></span></div>
+      <div style="position: relative; background: #FFFFFF; border: 2px solid #3A2214; border-radius: 28px; padding: 28px; font-size: 18px; line-height: 1.55; box-sizing: border-box">단백질바는 든든하지만, 퍽퍽해서 디저트 기분이 안 나요.<span aria-hidden="true" style="position: absolute; left: 36px; bottom: -11px; width: 18px; height: 18px; background: #FFFFFF; border-right: 2px solid #3A2214; border-bottom: 2px solid #3A2214; transform: rotate(45deg)"></span></div>
+      <div style="position: relative; background: #FFFFFF; border: 2px solid #3A2214; border-radius: 28px; padding: 28px; font-size: 18px; line-height: 1.55; box-sizing: border-box">닭가슴살은… 오늘은 좀 쉬고 싶어요.<span aria-hidden="true" style="position: absolute; left: 36px; bottom: -11px; width: 18px; height: 18px; background: #FFFFFF; border-right: 2px solid #3A2214; border-bottom: 2px solid #3A2214; transform: rotate(45deg)"></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. 죄책감 없는 즐거움 (3열 비교) -->
+<section class="sec" id="story" style="background: #F1E4D3; padding: 128px 0">
+  <div class="wrap">
+    <p style="margin: 0; font-family: 'Jua', sans-serif; font-size: 24px; color: #A33F00">그래서, 둘 다 되는 걸 만들었어요.</p>
+    <h2 class="h2" style="margin: 12px 0 0; font-family: 'Jua', sans-serif; font-weight: 400; font-size: 40px; line-height: 1.25">죄책감 없는 즐거움</h2>
+    <p style="margin: 16px 0 0; max-width: 34em">카페 케이크의 맛에, 단백질바의 영양을 더했습니다. 맛을 고르면 설탕이, 건강을 고르면 퍽퍽함이 따라왔죠. 이제 고르지 마세요, 둘 다 즐기면 됩니다.</p>
+    <div style="overflow-x: auto; margin-top: 48px; border-radius: 28px">
+      <table style="width: 100%; min-width: 640px; border-collapse: separate; border-spacing: 0; background: #FFFFFF; border-radius: 28px; overflow: hidden; font-size: 17px; text-align: left">
+        <caption style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">카페 치즈케이크, 단백질바, 멜로틴 비교</caption>
+        <thead>
+          <tr>
+            <th scope="col" style="padding: 24px; width: 18%; font-size: 15px; color: #6B4A36; border-bottom: 1px solid #F1E4D3"><span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">항목</span></th>
+            <th scope="col" style="padding: 24px; font-family: 'Jua', sans-serif; font-weight: 400; font-size: 22px; border-bottom: 1px solid #F1E4D3">카페 치즈케이크</th>
+            <th scope="col" style="padding: 24px; font-family: 'Jua', sans-serif; font-weight: 400; font-size: 22px; border-bottom: 1px solid #F1E4D3">단백질바</th>
+            <th scope="col" style="padding: 24px; background: #FCC144; border-bottom: 1px solid #F1E4D3"><span style="display: flex; align-items: center; gap: 10px; font-family: 'Jua', sans-serif; font-weight: 400; font-size: 24px"><img src="assets/images/character.png" alt="" style="width: 44px; height: auto">멜로틴</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row" style="padding: 24px; font-size: 15px; font-weight: 700; color: #6B4A36; border-bottom: 1px solid #F1E4D3">맛 · 식감</th>
+            <td style="padding: 24px; border-bottom: 1px solid #F1E4D3">맛은 최고</td>
+            <td style="padding: 24px; border-bottom: 1px solid #F1E4D3">퍽퍽해서 디저트 기분이 안 남</td>
+            <td style="padding: 24px; background: #FFF4DC; border-bottom: 1px solid #F1E4D3; font-weight: 700">입에서 녹는 꾸덕한 치즈케이크</td>
+          </tr>
+          <tr>
+            <th scope="row" style="padding: 24px; font-size: 15px; font-weight: 700; color: #6B4A36">영양</th>
+            <td style="padding: 24px">설탕과 탄수화물이 많음</td>
+            <td style="padding: 24px">저당 · 고단백</td>
+            <td style="padding: 24px; background: #FFF4DC; font-weight: 700">설탕 0g · 단백질 20g<span style="display: block; margin-top: 4px; font-size: 14px; font-weight: 600; color: #6B4A36">당알코올 함유 · 1봉 400kcal</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- 5. 맛 증명 티저 -->
+<section class="sec dark" id="taste" style="background: #3A2214; color: #F9F4EE; padding: 128px 0">
+  <div class="wrap" style="display: flex; flex-wrap: wrap; align-items: center; gap: 72px">
+    <div style="flex: 1 1 440px; min-width: 0">
+      <h2 class="h2" style="margin: 0; font-family: 'Jua', sans-serif; font-weight: 400; font-size: 40px; line-height: 1.25">맛은 말 대신,<br>블라인드 테스트로 보여드립니다</h2>
+      <p style="margin: 16px 0 0; color: #F1E4D3">일반 치즈케이크와 멜로틴, 이름을 가리고 먹어봤습니다.</p>
+      <div style="display: flex; align-items: center; gap: 16px; margin-top: 40px">
+        <span aria-hidden="true" style="width: 64px; height: 64px; border-radius: 50%; background: #FCC144; color: #3A2214; font-family: 'Jua', sans-serif; font-size: 30px; display: flex; align-items: center; justify-content: center">A</span>
+        <span aria-hidden="true" style="font-family: 'Jua', sans-serif; font-size: 28px; letter-spacing: 0.04em; color: #E0AE52">vs</span>
+        <span aria-hidden="true" style="width: 64px; height: 64px; border-radius: 50%; border: 3px solid #FCC144; color: #FCC144; font-family: 'Jua', sans-serif; font-size: 30px; display: flex; align-items: center; justify-content: center; box-sizing: border-box">B</span>
+        <span style="font-size: 15px; color: #F1E4D3">어느 쪽이 프로틴 케이크일까요?</span>
+      </div>
+      <div aria-live="polite">
+        <p class="num" style="margin: 40px 0 0; font-family: 'Jua', sans-serif; font-size: 96px; line-height: 1; color: #E0AE52"><span id="resultNum">?</span><span style="font-size: 40px"> / 100명</span></p>
+        <p style="margin: 12px 0 0; font-size: 20px; font-weight: 700"><span id="resultText">버튼을 눌러 결과를 확인해 보세요.</span></p>
+      </div>
+      <p style="margin: 12px 0 0; font-size: 14px; color: #F1E4D3">2026년 [월], 헬스장·필라테스 5곳 참여자 100명 기준 (가안 수치)</p>
+      <div class="btnrow" style="display: flex; flex-wrap: wrap; gap: 16px; margin-top: 32px">
+        <button class="btn btn-i" type="button" id="revealBtn" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 52px; padding: 0 28px; border-radius: 999px; border: 2px solid #F9F4EE; background: transparent; color: #F9F4EE; font-family: 'Gothic A1', sans-serif; font-weight: 700; font-size: 16px; cursor: pointer; box-sizing: border-box">블라인드 테스트 결과 보기</button>
+      </div>
+    </div>
+    <figure style="flex: 1 1 420px; min-width: 0; max-width: 480px; margin: 0 auto; background: #2A170D; border-radius: 32px; padding: 32px; box-sizing: border-box">
+      <div role="img" id="dotGrid" aria-label="참여자 100명, 결과 공개 전" style="display: grid; grid-template-columns: repeat(10, minmax(0, 1fr)); gap: 8px">
+                  <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+          <span data-dot style="display: block; aspect-ratio: 1 / 1; border-radius: 50%; background: transparent; transform: scale(0.86); border: 2px solid #E0AE52; box-sizing: border-box; transition: background-color 260ms ease-out, transform 260ms ease-out"></span>
+      </div>
+      <figcaption style="margin-top: 24px; display: flex; flex-wrap: wrap; gap: 12px 24px; font-size: 15px">
+        <span style="display: inline-flex; align-items: center; gap: 8px"><span aria-hidden="true" style="width: 14px; height: 14px; border-radius: 50%; background: #E0AE52"></span><span id="missLabel">맞히지 못함</span></span>
+        <span style="display: inline-flex; align-items: center; gap: 8px"><span aria-hidden="true" style="width: 14px; height: 14px; border-radius: 50%; border: 2px solid #E0AE52; box-sizing: border-box"></span><span id="hitLabel">맞힘</span></span>
+      </figcaption>
+      <p style="margin: 16px 0 0; font-size: 14px; line-height: 1.6; color: #F1E4D3">둘 중 하나를 고르는 테스트라, 맞힌 사람이 절반 안팎이면 맛 차이를 구별하기 어려웠다는 뜻이에요.</p>
+    </figure>
+  </div>
+</section>
+
+<!-- 6. 원료 -->
+<section class="sec" style="padding: 128px 0">
+  <div class="wrap">
+    <h2 class="h2" style="margin: 0; font-family: 'Jua', sans-serif; font-weight: 400; font-size: 40px; line-height: 1.25">밀가루와 설탕 대신,<br>코티지 치즈와 크림치즈</h2>
+    <p style="margin: 16px 0 0; max-width: 36em">꾸덕함은 크림치즈에서, 단백질 20g은 코티지 치즈에서. 단맛은 설탕 대신 에리스리톨과 몽크프루트로. 케이크를 케이크답게 만드는 것만 남겼습니다.</p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; margin-top: 48px">
+      <div style="background: #FFFFFF; border-radius: 24px; overflow: hidden">
+        <div style="position: relative">
+          <img src="assets/images/cottage-cheese.webp" alt="몽글몽글한 코티지 치즈 클로즈업" style="display: block; width: 100%; aspect-ratio: 16 / 10; object-fit: cover">
+          <span style="position: absolute; left: 16px; top: 16px; background: #FCC144; color: #3A2214; font-family: 'Jua', sans-serif; font-size: 16px; line-height: 1; padding: 8px 14px; border-radius: 999px">단백질 20g</span>
+        </div>
+        <div style="padding: 24px 32px 32px"><p style="margin: 0; font-family: 'Jua', sans-serif; font-size: 24px">코티지 치즈</p><p style="margin: 6px 0 0; color: #6B4A36">한 봉의 단백질 20g을 채우는 주인공</p></div>
+      </div>
+      <div style="background: #FFFFFF; border-radius: 24px; overflow: hidden">
+        <img src="assets/images/cream-cheese.webp" alt="나무 도마 위 크림치즈" style="display: block; width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: 60% center">
+        <div style="padding: 24px 32px 32px"><p style="margin: 0; font-family: 'Jua', sans-serif; font-size: 24px">크림치즈</p><p style="margin: 6px 0 0; color: #6B4A36">꾸덕한 식감을 맡았어요</p></div>
+      </div>
+      <div style="background: #F1E4D3; border-radius: 24px; padding: 32px; display: flex; flex-direction: column; justify-content: center">
+        <p style="margin: 0; font-size: 15px; font-weight: 700; color: #6B4A36">뺀 것</p>
+        <p style="margin: 8px 0 0; font-family: 'Jua', sans-serif; font-size: 44px; line-height: 1.2; text-decoration: line-through; text-decoration-thickness: 4px; text-decoration-color: #E45A00">밀가루<br>설탕</p>
+        <a class="lk" href="brand.html" style="margin-top: 24px; font-weight: 700; color: #A33F00">브랜드 이야기 보기</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. 칭찬 루틴 -->
+<section class="sec" id="workout" style="background: #F1E4D3; padding: 128px 0">
+  <div class="wrap">
+    <h2 class="h2" style="margin: 0; font-family: 'Jua', sans-serif; font-weight: 400; font-size: 40px; line-height: 1.25">운동 끝, 칭찬 시작</h2>
+    <p style="margin: 16px 0 0">쿨다운 다음 루틴은 멜로틴입니다.</p>
+    <div style="display: flex; flex-wrap: wrap; gap: 24px; margin-top: 48px">
+      <div style="flex: 1 1 520px; min-width: 0; position: relative; border-radius: 28px; overflow: hidden; aspect-ratio: 4 / 3; background: #3A2214">
+        <img src="assets/images/routine-gym.webp" alt="헬스장에서 운동 후 멜로틴을 먹는 여성" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%">
+        <div style="position: absolute; left: 0; right: 0; bottom: 0; padding: 96px 32px 28px; background: linear-gradient(transparent, rgba(58,34,20,0.9)); color: #F9F4EE"><p style="margin: 0; font-family: 'Jua', sans-serif; font-size: 28px">퇴근 후 헬스 끝나고</p><p style="margin: 4px 0 0">마지막 세트까지 버틴 당신에게, 단백질 20g짜리 칭찬.</p></div>
+      </div>
+      <div style="flex: 1 1 340px; min-width: 0; display: flex; flex-direction: column; gap: 24px">
+        <div style="flex: 1; background: #F9F4EE; border-radius: 28px; padding: 32px; display: flex; flex-direction: column; justify-content: center; gap: 12px">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#A33F00" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="5" r="2"></circle><path d="M4 21c2-5 4-8 8-8s6 3 8 8"></path><path d="M7 12l5-3 5 3"></path></svg>
+          <p style="margin: 0; font-family: 'Jua', sans-serif; font-size: 24px">주말 필라테스 끝나고</p>
+          <p style="margin: 0; color: #6B4A36">코어에 힘주느라 고생했어요. 이제 힘 빼고 한 조각.</p>
+        </div>
+        <div style="flex: 1; background: #F9F4EE; border-radius: 28px; padding: 32px; display: flex; flex-direction: column; justify-content: center; gap: 12px">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#A33F00" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="15" cy="4" r="2"></circle><path d="M9 21l3-6 3 2 1 5"></path><path d="M6 12l3-4 4 1 3 4 3 1"></path></svg>
+          <p style="margin: 0; font-family: 'Jua', sans-serif; font-size: 24px">5km 러닝 끝나고</p>
+          <p style="margin: 0; color: #6B4A36">5km를 달렸으니까, 달콤한 건 설탕 없이.</p>
+        </div>
+      </div>
+    </div>
+    <a class="lk" href="#workout" style="display: inline-block; margin-top: 32px; font-weight: 700; color: #A33F00">운동별 칭찬 루틴 보기</a>
+  </div>
+</section>
+
+<!-- 8. 칭찬 후기 (수집 전 상태) -->
+<section class="sec" style="padding: 128px 0">
+  <div class="wrap" style="display: flex; flex-wrap: wrap; align-items: center; gap: 64px">
+    <div style="flex: 1 1 420px; min-width: 0">
+      <h2 class="h2" style="margin: 0; font-family: 'Jua', sans-serif; font-weight: 400; font-size: 40px; line-height: 1.25">첫 번째 칭찬을<br>기다리고 있어요</h2>
+      <p style="margin: 16px 0 0; max-width: 28em">무료 샘플을 먼저 맛본 분들의 후기를 모으고 있어요. 운동 끝난 인증샷에 #운동끝칭찬한조각을 달아 첫 칭찬을 남겨주세요.</p>
+      <p style="margin: 24px 0 0; font-size: 14px; font-weight: 700; color: #6B4A36">인증샷에 달아주세요</p>
+      <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px">
+        <span style="background: #F1E4D3; border-radius: 999px; padding: 8px 16px; font-weight: 600; font-size: 15px">#운동끝칭찬한조각</span>
+        <span style="background: #F1E4D3; border-radius: 999px; padding: 8px 16px; font-weight: 600; font-size: 15px">#멜로틴</span>
+      </div>
+      <div class="btnrow" style="display: flex; flex-wrap: wrap; gap: 16px; margin-top: 32px">
+        <a class="btn btn-s" href="#buy" style="display: inline-flex; align-items: center; justify-content: center; height: 52px; padding: 0 28px; border-radius: 999px; border: 2px solid #3A2214; color: #3A2214; font-weight: 700; font-size: 16px; text-decoration: none; box-sizing: border-box">헬스장·필라테스 시식 제휴 문의</a>
+      </div>
+    </div>
+    <img src="assets/images/texture.webp" alt="스푼으로 뜬 멜로틴의 꾸덕한 단면" style="flex: 1 1 460px; min-width: 0; display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 28px">
+  </div>
+</section>
+
+<!-- 9. 마무리 CTA -->
+<section class="sec" id="buy" data-cta style="background: #FCC144; padding: 128px 0; text-align: center">
+  <div class="wrap">
+    <div style="display: flex; justify-content: center; align-items: flex-end; gap: 8px">
+      <img src="assets/images/character.png" alt="" style="display: block; width: 132px; height: auto">
+      <div role="img" aria-label="칭찬 도장: 칭찬 완료" style="width: 132px; height: 132px; border-radius: 50%; border: 4px solid #A33F00; background: #F9F4EE; display: flex; align-items: center; justify-content: center; transform: rotate(10deg); box-sizing: border-box">
+        <div style="width: 108px; height: 108px; flex: none; border-radius: 50%; border: 2px dashed #A33F00; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #A33F00; font-family: 'Jua', sans-serif; line-height: 1.1; box-sizing: border-box"><span style="font-size: 13px">오늘의</span><span style="font-size: 28px">칭찬 완료</span></div>
+      </div>
+    </div>
+    <h2 class="h2" style="margin: 32px auto 0; max-width: 15em; font-family: 'Jua', sans-serif; font-weight: 400; font-size: 48px; line-height: 1.25">오늘 운동했다면,<br>칭찬받을 자격 충분해요</h2>
+    <p style="margin: 16px auto 0; font-size: 20px; max-width: 30em">무료 샘플로 먼저 맛보거나, 공식몰에서 바로 주문하세요.</p>
+    <div class="btnrow" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; margin-top: 40px">
+      <a class="btn btn-p" href="#buy" style="display: inline-flex; align-items: center; justify-content: center; height: 60px; padding: 0 36px; border-radius: 999px; background: #C24C00; color: #FFFFFF; font-weight: 700; font-size: 18px; text-decoration: none">무료 샘플 신청하기</a>
+      <a class="btn btn-s" href="#buy" style="display: inline-flex; align-items: center; justify-content: center; height: 60px; padding: 0 36px; border-radius: 999px; border: 2px solid #3A2214; color: #3A2214; font-weight: 700; font-size: 18px; text-decoration: none; box-sizing: border-box; gap: 8px" aria-label="공식몰에서 구매하기 (새 창에서 열림)">공식몰에서 구매하기<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6"></path><path d="M20 4l-9 9"></path><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"></path></svg></a>
+    </div>
+    <p style="margin: 28px 0 0; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 8px 14px; font-size: 15px">
+      <a class="lk" href="#buy" style="color: #3A2214; font-weight: 700">자주 묻는 질문</a>
+      <span aria-hidden="true" style="width: 4px; height: 4px; border-radius: 50%; background: #3A2214"></span>
+      <a class="lk" href="#buy" style="color: #3A2214; font-weight: 700">카카오톡으로 문의하기</a>
+      <span aria-hidden="true" style="width: 4px; height: 4px; border-radius: 50%; background: #3A2214"></span>
+      <a class="lk" href="mailto:hello@mellotein.co.kr" style="color: #3A2214; font-weight: 700">이메일로 문의하기</a>
+    </p>
+  </div>
+</section>
+
+</main>
+
+<!-- 푸터 -->
+<footer class="foot dark" style="background: #3A2214; color: #F9F4EE; padding: 72px 0 40px">
+  <div class="wrap">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 40px">
+      <div>
+        <img src="assets/images/emblem.webp" alt="PROTEIN CHEESE CAKE 원형 엠블럼" style="display: block; width: 112px; height: auto; background: #F9F4EE; border-radius: 16px; padding: 6px">
+        <p style="margin: 16px 0 0; font-family: 'Jua', sans-serif; font-size: 24px; letter-spacing: 0.06em; color: #E0AE52">MELLOTEIN</p>
+        <p style="margin: 8px 0 0; font-size: 15px; color: #F1E4D3">설탕 0g, 단백질 20g.<br>운동 끝나고 먹어도 칭찬받는 치즈케이크</p>
+      </div>
+      <nav aria-label="푸터 메뉴">
+        <p style="margin: 0 0 12px; font-family: 'Jua', sans-serif; color: #E0AE52">메뉴</p>
+        <p style="margin: 0; display: flex; flex-direction: column; gap: 8px; font-size: 15px"><a href="brand.html">브랜드 · 멜로틴 이야기</a><a href="product.html">제품 · 프로틴 치즈케이크</a><a href="#taste">맛 증명 · 블라인드 테스트</a><a href="#workout">운동 후 루틴 · 칭찬 루틴</a><a href="#buy">구매·체험 · 무료 샘플, 판매처</a></p>
+      </nav>
+      <div>
+        <p style="margin: 0 0 12px; font-family: 'Jua', sans-serif; color: #E0AE52">고객지원</p>
+        <p style="margin: 0; display: flex; flex-direction: column; gap: 8px; font-size: 15px"><a href="#buy">자주 묻는 질문</a><a href="#buy">무료 샘플 신청하기</a><a href="#buy">센터 시식 제휴 문의</a><a href="#buy">입점·제휴 문의</a></p>
+      </div>
+      <div>
+        <p style="margin: 0 0 12px; font-family: 'Jua', sans-serif; color: #E0AE52">연락처</p>
+        <p style="margin: 0; font-size: 15px; line-height: 1.8">고객센터 <a href="tel:1600-0000"><b>1600-0000</b></a><br>평일 10:00–17:00<br><span style="font-size: 13px; color: #F1E4D3">점심 12:00–13:00, 주말·공휴일 휴무</span><br><a href="mailto:hello@mellotein.co.kr">hello@mellotein.co.kr</a><br><a href="#buy">카카오톡 채널 @멜로틴 추가하기</a></p>
+        <div style="display: flex; gap: 8px; margin-top: 16px">
+          <a href="#top" aria-label="멜로틴 인스타그램 @mellotein.official" style="width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid rgba(249,244,238,0.4); display: inline-flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle></svg></a>
+          <a href="#top" aria-label="멜로틴 유튜브 @mellotein" style="width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid rgba(249,244,238,0.4); display: inline-flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="4"></rect><path d="M10 9.5v5l4.5-2.5z" fill="currentColor"></path></svg></a>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top: 48px; padding-top: 24px; border-top: 1px solid rgba(249,244,238,0.2); font-size: 13px; line-height: 1.7; color: #F1E4D3">
+      <p style="margin: 0">주식회사 멜로틴 | 대표 홍길동 | 사업자등록번호 000-00-00000 | 통신판매업 제2026-서울강남-0000호 | 서울특별시 강남구 테헤란로 000, 0층 (예시 정보)</p>
+      <p style="margin: 4px 0 0">*영양성분은 멜로틴 1봉(200g) 기준, 열량 400kcal · 당알코올 함유 | <a href="#top">개인정보처리방침</a> | <a href="#top">이용약관</a> | © 2026 MELLOTEIN</p>
+    </div>
+  </div>
+</footer>
+
+<!-- 모바일 하단 고정 CTA 바: 히어로를 지나면 등장, 마무리 CTA에서 숨김 -->
+<div id="mbarwrap" hidden>
+  <div class="mbar" style="position: fixed; left: 0; right: 0; bottom: 0; z-index: 30; min-height: 64px; padding: 10px 16px calc(10px + env(safe-area-inset-bottom)); background: #FFFFFF; border-top: 1px solid #F1E4D3; box-shadow: 0 -6px 16px rgba(58,34,20,0.08); align-items: center; justify-content: space-between; gap: 12px; box-sizing: border-box">
+    <span class="mtx" style="font-weight: 700; font-size: 15px">오늘 운동했다면?</span>
+    <a class="btn btn-p" href="#buy" style="display: inline-flex; align-items: center; height: 48px; padding: 0 24px; border-radius: 999px; background: #C24C00; color: #FFFFFF; font-weight: 700; font-size: 16px; text-decoration: none">무료 샘플 신청하기</a>
+  </div>
+</div>
+
+</div>
+<script src="assets/js/site.js" defer></script>
+</body>
+</html>
