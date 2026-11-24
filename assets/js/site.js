@@ -67,6 +67,7 @@
     var dots = document.querySelectorAll('[data-dot]');
     var revealed = false;
     var MISS = 56;
+    var initialLabel = revealBtn.textContent;
     var set = function (id, text) { var el = document.getElementById(id); if (el) el.textContent = text; };
     revealBtn.addEventListener('click', function () {
       revealed = !revealed;
@@ -80,7 +81,7 @@
       set('resultText', revealed ? '어느 쪽이 프로틴 케이크인지 맞히지 못했습니다.' : '버튼을 눌러 결과를 확인해 보세요.');
       set('missLabel', revealed ? '맞히지 못함 ' + MISS + '명' : '맞히지 못함');
       set('hitLabel', revealed ? '맞힘 ' + (100 - MISS) + '명' : '맞힘');
-      revealBtn.textContent = revealed ? '다시 보기' : '블라인드 테스트 결과 보기';
+      revealBtn.textContent = revealed ? '다시 보기' : initialLabel;
       var grid = document.getElementById('dotGrid');
       if (grid) grid.setAttribute('aria-label', revealed ? '참여자 100명 중 ' + MISS + '명은 맞히지 못했고 ' + (100 - MISS) + '명은 맞혔습니다' : '참여자 100명, 결과 공개 전');
     });
